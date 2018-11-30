@@ -1,0 +1,801 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!doctype html>
+
+<!--[if lt IE 7 ]> <html class="ie ie6 ie-lt10 ie-lt9 ie-lt8 ie-lt7 no-js" lang="es-LA"> <![endif]-->
+<!--[if IE 7 ]>    <html class="ie ie7 ie-lt10 ie-lt9 ie-lt8 no-js" lang="es-LA"> <![endif]-->
+<!--[if IE 8 ]>    <html class="ie ie8 ie-lt10 ie-lt9 no-js" lang="es-LA"> <![endif]-->
+<!--[if IE 9 ]>    <html class="ie ie9 ie-lt10 no-js" lang="es-LA"> <![endif]-->
+<!--[if gt IE 9]><!--><html class="no-js" lang="es-LA"><!--<![endif]-->
+
+  <head data-template-set="hirez-wp-theme-boilerplate">
+
+  	<meta charset="UTF-8">
+
+  	<!-- Always force latest IE rendering engine (even in intranet) -->
+  	<!--[if IE ]>
+  	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+  	<![endif]-->
+
+    
+  	
+  	<title>Submit Support Ticket | </title>
+
+  	<meta name="title" content="Submit Support Ticket | ">
+
+  	<!--Google will often use this as its description of your page/site. Make it good.-->
+  	<meta name="description" content="" />
+
+  	<meta name="Copyright" content="Copyright &copy; Hi-Rez Studios 2015. All Rights Reserved.">
+
+    <meta name="viewport" content="width=device-width initial-scale=1.0 minimal-ui" />
+    <meta name=”mobile-web-app-capable” content=”yes”><link rel="shortcut icon" sizes=”1024x1024” href="209" />
+  	<link rel="stylesheet" href="http://www.hirezstudios.com/wp-content/themes/hi-rez-studios/style.css" />
+    <script src='http://www.google.com/recaptcha/api.js'></script>
+
+  	  	<script src="http://www.hirezstudios.com/wp-content/themes/hi-rez-studios/js/modernizr-2.8.3.dev.js"></script>
+
+  	<meta name="twitter:card" content="summary" /><meta name="twitter:site" content="Hi-Rez Studios" /><meta name="twitter:title" content="Hi-Rez Studios The Official Website"><meta name="twitter:description" content="Hi-Rez Studios is an independent, privately held video-game developer based in Alpharetta, Georgia, United States. The company was established in 2005 by Erez Goren and Todd Harris, and is now one of the largest video-game studios in the southeast United States." /><meta name="twitter:url" content="http://www.hirezstudios.com" /><meta property="og:title" content="Hi-Rez Studios The Official Website" /><meta property="og:description" content="Hi-Rez Studios is an independent, privately held video-game developer based in Alpharetta, Georgia, United States. The company was established in 2005 by Erez Goren and Todd Harris, and is now one of the largest video-game studios in the southeast United States." /><meta property="og:url" content="http://www.hirezstudios.com" /><meta property="og:image" content="210" />
+    
+  	<link rel="profile" href="http://gmpg.org/xfn/11" />
+  	<link rel="pingback" href="http://www.hirezstudios.com/xmlrpc.php" />
+
+    <script type="text/javascript">  var homeURL = "http://www.hirezstudios.com"</script>
+  	<link rel='dns-prefetch' href='//www.hirezstudios.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//cdnjs.cloudflare.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/2\/svg\/","svgExt":".svg","source":{"wpemoji":"http:\/\/www.hirezstudios.com\/wp-includes\/js\/wp-emoji.js?ver=4.6.1","twemoji":"http:\/\/www.hirezstudios.com\/wp-includes\/js\/twemoji.js?ver=4.6.1"}};
+			( function( window, document, settings ) {
+	var src, ready, ii, tests;
+
+	/**
+	 * Detect if the browser supports rendering emoji or flag emoji. Flag emoji are a single glyph
+	 * made of two characters, so some browsers (notably, Firefox OS X) don't support them.
+	 *
+	 * @since 4.2.0
+	 *
+	 * @param type {String} Whether to test for support of "simple", "flag", "diversity" or "unicode8" emoji.
+	 * @return {Boolean} True if the browser can render emoji, false if it cannot.
+	 */
+	function browserSupportsEmoji( type ) {
+		var canvas = document.createElement( 'canvas' ),
+			context = canvas.getContext && canvas.getContext( '2d' ),
+			stringFromCharCode = String.fromCharCode,
+			flag, flag2, tonedata, tone, tone2;
+
+		if ( ! context || ! context.fillText ) {
+			return false;
+		}
+
+		/*
+		 * Chrome on OS X added native emoji rendering in M41. Unfortunately,
+		 * it doesn't work when the font is bolder than 500 weight. So, we
+		 * check for bold rendering support to avoid invisible emoji in Chrome.
+		 */
+		context.textBaseline = 'top';
+		context.font = '600 32px Arial';
+
+		switch ( type ) {
+			case 'flag':
+				/*
+				 * This works because the image will be one of three things:
+				 * - Two empty squares, if the browser doesn't render emoji
+				 * - Two squares with 'A' and 'U' in them, if the browser doesn't render flag emoji
+				 * - The Australian flag
+				 *
+				 * The first two will encode to small images (1-2KB data URLs), the third will encode
+				 * to a larger image (4-5KB data URL).
+				 */
+				context.fillText( stringFromCharCode( 55356, 56806, 55356, 56826 ), 0, 0 );
+				if ( canvas.toDataURL().length < 3000 ) {
+					return false;
+				}
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				/*
+				 * Test for rainbow flag compatibility. As the rainbow flag was added out of sequence with
+				 * the usual Unicode release cycle, some browsers support it, and some don't, even if their
+				 * Unicode support is up to date.
+				 *
+				 * To test for support, we try to render it, and compare the rendering to how it would look if
+				 * the browser doesn't render it correctly (white flag emoji + rainbow emoji).
+				 */
+				context.fillText( stringFromCharCode( 55356, 57331, 65039, 8205, 55356, 57096 ), 0, 0 );
+				flag = canvas.toDataURL();
+
+				context.clearRect( 0, 0, canvas.width, canvas.height );
+
+				context.fillText( stringFromCharCode( 55356, 57331, 55356, 57096 ), 0, 0 );
+				flag2 = canvas.toDataURL();
+
+				return flag !== flag2;
+			case 'diversity':
+				/*
+				 * This tests if the browser supports the Emoji Diversity specification, by rendering an
+				 * emoji with no skin tone specified (in this case, Santa). It then adds a skin tone, and
+				 * compares if the emoji rendering has changed.
+				 */
+				context.fillText( stringFromCharCode( 55356, 57221 ), 0, 0 );
+				tonedata = context.getImageData( 16, 16, 1, 1 ).data;
+				tone = tonedata[0] + ',' + tonedata[1] + ',' + tonedata[2] + ',' + tonedata[3];
+
+				context.fillText( stringFromCharCode( 55356, 57221, 55356, 57343 ), 0, 0 );
+				// Chrome has issues comparing arrays, and Safari has issues converting arrays to strings.
+				// So, we create our own string and compare that, instead.
+				tonedata = context.getImageData( 16, 16, 1, 1 ).data;
+				tone2 = tonedata[0] + ',' + tonedata[1] + ',' + tonedata[2] + ',' + tonedata[3];
+
+				return tone !== tone2;
+			case 'simple':
+				/*
+				 * This creates a smiling emoji, and checks to see if there is any image data in the
+				 * center pixel. In browsers that don't support emoji, the character will be rendered
+				 * as an empty square, so the center pixel will be blank.
+				 */
+				context.fillText( stringFromCharCode( 55357, 56835 ), 0, 0 );
+				return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+			case 'unicode8':
+				/*
+				 * To check for Unicode 8 support, let's try rendering the most important advancement
+				 * that the Unicode Consortium have made in years: the burrito.
+				 */
+				context.fillText( stringFromCharCode( 55356, 57135 ), 0, 0 );
+				return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+			case 'unicode9':
+				/*
+				 * Do Unicode 9 emoji render?
+				 * ¯\_(ツ)_/¯
+				 */
+				context.fillText( stringFromCharCode( 55358, 56631 ), 0, 0 );
+				return context.getImageData( 16, 16, 1, 1 ).data[0] !== 0;
+		}
+
+		return false;
+	}
+
+	function addScript( src ) {
+		var script = document.createElement( 'script' );
+
+		script.src = src;
+		script.type = 'text/javascript';
+		document.getElementsByTagName( 'head' )[0].appendChild( script );
+	}
+
+	tests = Array( 'simple', 'flag', 'unicode8', 'diversity', 'unicode9' );
+
+	settings.supports = {
+		everything: true,
+		everythingExceptFlag: true
+	};
+
+	for( ii = 0; ii < tests.length; ii++ ) {
+		settings.supports[ tests[ ii ] ] = browserSupportsEmoji( tests[ ii ] );
+
+		settings.supports.everything = settings.supports.everything && settings.supports[ tests[ ii ] ];
+
+		if ( 'flag' !== tests[ ii ] ) {
+			settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && settings.supports[ tests[ ii ] ];
+		}
+	}
+
+	settings.supports.everythingExceptFlag = settings.supports.everythingExceptFlag && ! settings.supports.flag;
+
+	settings.DOMReady = false;
+	settings.readyCallback = function() {
+		settings.DOMReady = true;
+	};
+
+	if ( ! settings.supports.everything ) {
+		ready = function() {
+			settings.readyCallback();
+		};
+
+		if ( document.addEventListener ) {
+			document.addEventListener( 'DOMContentLoaded', ready, false );
+			window.addEventListener( 'load', ready, false );
+		} else {
+			window.attachEvent( 'onload', ready );
+			document.attachEvent( 'onreadystatechange', function() {
+				if ( 'complete' === document.readyState ) {
+					settings.readyCallback();
+				}
+			} );
+		}
+
+		src = settings.source || {};
+
+		if ( src.concatemoji ) {
+			addScript( src.concatemoji );
+		} else if ( src.wpemoji && src.twemoji ) {
+			addScript( src.twemoji );
+			addScript( src.wpemoji );
+		}
+	}
+
+} )( window, document, window._wpemojiSettings );
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='google-fonts-open-sans-css'  href='//fonts.googleapis.com/css?family=Open+Sans%3A400%2C700&#038;ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='ytp-icons-css'  href='http://www.hirezstudios.com/wp-content/plugins/rdv-youtube-playlist-video-player/packages/icons/css/icons.min.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='ytp-style-css'  href='http://www.hirezstudios.com/wp-content/plugins/rdv-youtube-playlist-video-player/packages/youtube-video-player/css/youtube-video-player.min.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='perfect-scrollbar-style-css'  href='http://www.hirezstudios.com/wp-content/plugins/rdv-youtube-playlist-video-player/packages/perfect-scrollbar/perfect-scrollbar.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.hirezstudios.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.5' type='text/css' media='all' />
+<link rel='stylesheet' id='hzdash-css-css'  href='http://www.hirezstudios.com/wp-content/plugins/hirez-acct-dash-plugin/css/hzdash.min.css?ver=1.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='select2-css-css'  href='http://www.hirezstudios.com/wp-content/plugins/hirez-acct-dash-plugin/css/select2.min.css?ver=1.5.3' type='text/css' media='all' />
+<link rel='stylesheet' id='swiper-css'  href='//cdnjs.cloudflare.com/ajax/libs/Swiper/3.0.8/css/swiper.min.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='ioniconcss-css'  href='http://www.hirezstudios.com/wp-content/themes/hi-rez-studios/css/ionicons.min.css?ver=4.6.1' type='text/css' media='all' />
+<link rel='stylesheet' id='customcss-css'  href='http://www.hirezstudios.com/wp-content/themes/hi-rez-studios/css/custom.min.css?ver=4.6.1' type='text/css' media='all' />
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-includes/js/jquery/jquery.js?ver=1.12.4'></script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-includes/js/jquery/jquery-migrate.js?ver=1.4.1'></script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/plugins/rdv-youtube-playlist-video-player/packages/perfect-scrollbar/jquery.mousewheel.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/plugins/rdv-youtube-playlist-video-player/packages/perfect-scrollbar/perfect-scrollbar.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/plugins/rdv-youtube-playlist-video-player/packages/youtube-video-player/js/youtube-video-player.jquery.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/plugins/rdv-youtube-playlist-video-player/js/plugin.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/themes/hi-rez-studios/js/vendor.min.js'></script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/plugins/hirez-acct-dash-plugin/js/jquery.validate.min.js?ver=4.6.1'></script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/plugins/hirez-acct-dash-plugin/js/select2.min.js?ver=4.6.1'></script>
+<link rel='https://api.w.org/' href='http://www.hirezstudios.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="http://www.hirezstudios.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.hirezstudios.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.6.1" />
+<link rel="canonical" href="http://www.hirezstudios.com/submit-support-ticket/" />
+<link rel='shortlink' href='http://www.hirezstudios.com/?p=652' />
+<link rel="alternate" type="application/json+oembed" href="http://www.hirezstudios.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.hirezstudios.com%2Fsubmit-support-ticket%2F" />
+<link rel="alternate" type="text/xml+oembed" href="http://www.hirezstudios.com/wp-json/oembed/1.0/embed?url=http%3A%2F%2Fwww.hirezstudios.com%2Fsubmit-support-ticket%2F&#038;format=xml" />
+
+  </head>
+
+  
+  <body class="page page-id-652 page-template page-template-page-support page-template-page-support-php es_LA" >
+
+    <div class="hirez-super-nav">
+                        <ul class="center-nav">
+                          <li class="hirez-corp">
+                            <ul class="hirez-corp-sub">
+                              <li><a href="/">Inicio de Hi-Rez Studios</a></li>
+                              <li><a href="/culture/">Acerca de Hi-Rez</a></li>
+                              <li><a href="/careers/">Trabaja en Hi-Rez</a></li>
+                              <li><a href="/press/">Prensa y medios</a></li>
+                              <li><a href="/contact/">Contáctanos</a></li>
+                            </ul>
+                          </li>
+                          <li class="account">
+                            Cuenta
+                            <ul class="account-sub">       <li><a href="https://www.hirezstudios.com/my-account/#create-account">Crear cuenta</a></li>       <li><a href="https://www.hirezstudios.com/my-account">Mi cuenta</a></li>
+                            </ul>
+                          </li>
+                          <li class="store">
+                            <a href="http://www.hirezstudios.com/stores">Tienda</a>
+                          </li>
+                          <li class="support">
+                            Asistencia
+                            <ul class="support-sub">
+                              <li><a href="http://www.hirezstudios.com/submit-support-ticket">Envía un Ticket de Soporte</a></li>
+                              <li><a href="http://hirezstudios.force.com/support?lang=es_LA">Base de conocimientos</a></li>
+                            </ul>
+                          </li>
+                          <li class="explore-games">
+                            Ver juegos
+                            <ul class="explore-sub">
+                              <li class="paladins">
+                                <a href="http://www.paladins.com/" target="_blank">
+                                  <div class="skin-message">
+                                    <div class="top panel"></div>
+                                    <div class="bottom panel"></div>
+                                  </div>
+                                  <div class="info"><b>Paladins</b></div>
+                                  <div class="text-wrapper">
+                                    <p>Videojuego estratégico de disparos basado en equipos.</p>
+                                  </div>
+                                  <div class="top-text-wrapper">Videojuego gratuito</div>
+                                </a>
+                              </li>
+                              <li class="smite">
+                                <a href="http://www.smitegame.com/" target="_blank">
+                                  <div class="skin-message">
+                                    <div class="top panel"></div>
+                                    <div class="bottom panel"></div>
+                                  </div>
+                                  <div class="info"><b>Smite</b></div>
+                                  <div class="text-wrapper">
+                                    <p>Videojuego de acción MOBA en tercera persona.</p>
+                                  </div>
+                                  <div class="top-text-wrapper">Videojuego gratuito</div>
+                                </a>
+                              </li>
+                              <li class="tactics">
+                                <a href="http://www.handofthegods.com/" target="_blank">
+                                  <div class="skin-message">
+                                    <div class="top panel"></div>
+                                    <div class="bottom panel"></div>
+                                  </div>
+                                  <div class="info"><b>Hand of the Gods</b></div>
+                                  <div class="text-wrapper">
+                                    <p>Juego de cartas coleccionables de estrategia basado en turnos</p>
+                                  </div>
+                                  <div class="top-text-wrapper">Videojuego gratuito</div>
+                                </a>
+                              </li>
+                              <li class="realm">
+                                <a href="http://www.realmroyale.com/" target="_blank">
+                                  <div class="skin-message">
+                                    <div class="top panel"></div>
+                                    <div class="bottom panel"></div>
+                                  </div>
+                                  <div class="info"><b>Realm Royale</b></div>
+                                  <div class="text-wrapper">
+                                    <p>juego estilo Battle Royale de fantasía basado en clases</p>
+                                  </div>
+                                  <div class="top-text-wrapper">Videojuego gratuito</div>
+                                </a>
+                              </li>
+                            </ul>
+                          </li>
+                          <li class="languages">
+                            <span>Idioma</span>
+                            <ul class="languages-sub">     <li><a href="?lang=en_US">English</a></li>     <li><a href="?lang=fr_FR">Français</a></li>     <li><a href="?lang=de_DE">Deutsch</a></li>     <li><a href="?lang=es_LA">Español</a></li>     <li><a href="?lang=pl_PL">Polski</a></li>     <li><a href="?lang=ru_RU">Русский</a></li>     <li><a href="?lang=pt_BR">Português do Brasil</a></li>    <li><a href="?lang=zh_CN">中文</a></li>    <li><a href="?lang=ja_JP">日本語</a></li>     </ul>
+                          </li>
+                        </ul>
+                      </div>
+                      <div class="hirez-super-nav-mobile" onclick="void(0)">
+                        <div class="hirez-corp" data-nav-btn=".super-nav-wrapper"></div>
+                        <div class="super-nav-wrapper toggle-nav">
+                          <div class="close-btn"></div>
+                          <div class="hirez-logo"><?xml version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"   viewBox="0 0 293.1 70.2" style="enable-background:new 0 0 293.1 70.2;" xml:space="preserve"><path d="M0.9,0h9.9v16.5h31V0h10v42.6h-10V24.3h-31v18.3H0.9V0z"/><path d="M73.6,0h9.9v42.6h-9.9V0z"/><path d="M99.4,16.4h10.2v8.5H99.4V16.4z"/><path d="M124.6,0h36.5c3.3,0,5.7,0.6,7.3,1.9c1.5,1.3,2.3,3.4,2.3,6.4v10c0,3-0.8,5.1-2.3,6.4c-1.5,1.3-4,1.9-7.3,1.9h-5.6  l19.7,16.1H161l-17.2-16.1h-9.4v16.1h-9.7V0z M134.4,7.4v11.9h22.3c1.5,0,2.7-0.2,3.4-0.6c0.7-0.4,1.1-1.3,1.1-2.8v-5.1  c0-1.4-0.4-2.4-1.1-2.8c-0.7-0.4-1.8-0.6-3.4-0.6H134.4z"/><path d="M190.9,0h43.6v7.3h-33.7v9.5h19.7V24h-19.7v10.6h34.1v8h-44V0z"/><path d="M247.4,38l29.8-30.4h-26.8V0h42.8v4.2l-30.2,30.4h30.2v8h-45.8V38z"/><g>  <path d="M16.4,54.9H3.8v4.6h11.5c1.7,0,2.8,0.3,3.4,0.9c0.6,0.6,0.9,1.7,0.9,3.4v2.1c0,1.7-0.3,2.8-0.9,3.4    c-0.6,0.6-1.8,0.9-3.5,0.9H4.4c-1.7,0-2.9-0.3-3.5-0.9C0.3,68.7,0,67.6,0,65.9v-0.5l3.1-0.6v2.7h13.5v-5H5.1    c-1.7,0-2.8-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4v-1.7c0-1.6,0.3-2.8,0.9-3.4c0.6-0.6,1.8-0.9,3.5-0.9h10c1.7,0,2.8,0.3,3.5,0.9    c0.6,0.6,1,1.6,1,3.1v0.4l-3.1,0.7V54.9z"/>  <path d="M56.9,54.9v15.3h-3.4V54.9H45v-2.7h20.4v2.7H56.9z"/>  <path d="M94.6,52.2v15.2h13.1V52.2h3.4v13.7c0,1.7-0.3,2.8-0.9,3.4c-0.6,0.6-1.8,0.9-3.5,0.9H95.6c-1.7,0-2.9-0.3-3.5-0.9    c-0.6-0.6-0.9-1.7-0.9-3.3V52.2H94.6z"/>  <path d="M151.9,52.2c1.7,0,3.1,0.1,4.3,0.3c1.2,0.2,2.1,0.6,2.9,1c1.2,0.8,2.2,1.8,2.9,3.2c0.7,1.3,1,2.8,1,4.4    c0,3-0.9,5.3-2.7,6.8c-1.8,1.5-4.6,2.2-8.3,2.2h-10.3V52.2H151.9z M151.5,54.9h-6.6v12.6h6.6c2.9,0,5-0.5,6.2-1.5    c1.2-1,1.8-2.6,1.8-4.9c0-2.2-0.6-3.8-1.9-4.8C156.5,55.4,154.4,54.9,151.5,54.9z"/>  <path d="M195,70.2h-3.4V52.3h3.4V70.2z"/>  <path d="M223.6,56.5c0-1.6,0.3-2.8,0.9-3.4c0.6-0.6,1.8-0.9,3.5-0.9h13c1.7,0,2.9,0.3,3.5,0.9c0.6,0.6,0.9,1.7,0.9,3.4v9.4    c0,1.6-0.3,2.8-0.9,3.3c-0.6,0.6-1.8,0.9-3.5,0.9h-13c-1.7,0-2.9-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4V56.5z M226.9,67.4h15V54.9    h-15V67.4z"/>  <path d="M289.8,54.9h-12.6v4.6h11.5c1.7,0,2.8,0.3,3.4,0.9c0.6,0.6,0.9,1.7,0.9,3.4v2.1c0,1.7-0.3,2.8-0.9,3.4    c-0.6,0.6-1.8,0.9-3.5,0.9h-10.9c-1.7,0-2.9-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4v-0.5l3.1-0.6v2.7H290v-5h-11.5    c-1.7,0-2.8-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4v-1.7c0-1.6,0.3-2.8,0.9-3.4c0.6-0.6,1.8-0.9,3.5-0.9h10c1.7,0,2.8,0.3,3.5,0.9    c0.6,0.6,1,1.6,1,3.1v0.4l-3.1,0.7V54.9z"/></g></svg></div>
+                          <ul class="sub-menu">
+                            <li class="sub-nav-indicator">Hi-Rez Studios
+                              <ul>
+                                <li><a href="/">Inicio de Hi-Rez Studios</a></li>
+                                <li><a href="/culture/">Acerca de Hi-Rez</a></li>
+                                <li><a href="/careers/">Trabaja en Hi-Rez</a></li>
+                                <li><a href="/press/">Prensa y medios</a></li>
+                                <li><a href="/contact/">Contáctanos</a></li>
+                              </ul>
+                            </li>
+                            <li class="sub-nav-indicator">Cuenta
+                              <ul>
+                                <li><a href="/my-account/#create-account">Crear cuenta</a></li>
+                                <li><a href="/my-account">Mi cuenta</a></li>
+                              </ul>
+                            </li>
+                            <li class="sub-nav-indicator">Asistencia
+                              <ul>
+                              <li><a href="http://www.hirezstudios.com/submit-support-ticket">Envía un Ticket de Soporte</a></li>
+                              <li><a href="http://hirezstudios.force.com/support?lang=es_LA">Base de conocimientos</a></li>
+                              </ul>
+                            </li>
+                            <li class="sub-nav-indicator">Ver juegos
+                              <ul>
+                                <li><a href="http://www.paladins.com/" target="_blank">Paladins</a></li>
+                                <li><a href="http://www.smitegame.com/" target="_blank">Smite</a></li>
+                                <li><a href="http://www.tribesascend.com/" target="_blank">Tribes: Ascend</a></li>
+                                <li><a href="http://www.jetpackfighter.com/" target="_blank">Jetpack Fighter</a></li>
+                              </ul>
+                            </li>
+                            <li class="language sub-nav-indicator">
+                              Idioma
+                              <ul class="languages-sub">     <li><a href="?lang=en_US">English</a></li>     <li><a href="?lang=fr_FR">Français</a></li>     <li><a href="?lang=de_DE">Deutsch</a></li>     <li><a href="?lang=es_LA">Español</a></li>     <li><a href="?lang=pl_PL">Polski</a></li>     <li><a href="?lang=ru_RU">Русский</a></li>     <li><a href="?lang=pt_BR">Português do Brasil</a></li>    <li><a href="?lang=zh_CN">中文</a></li>    <li><a href="?lang=ja_JP">日本語<</a></li>     </ul>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>    <!-- TOP NAV -->
+    <div class="main-nav hide-for-small-only">
+      <div class="row no-margin collapse">
+        <div class="columns small-12">
+          <div class="top-nav overlap">
+            <div class="center-wrapper">
+              <div class="nav-items">
+                <div class="nav-item logo">
+                  <a href="/homepage">
+                    <?xml version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 293.1 70.2" style="enable-background:new 0 0 293.1 70.2;" xml:space="preserve"><path d="M0.9,0h9.9v16.5h31V0h10v42.6h-10V24.3h-31v18.3H0.9V0z"/><path d="M73.6,0h9.9v42.6h-9.9V0z"/><path d="M99.4,16.4h10.2v8.5H99.4V16.4z"/><path d="M124.6,0h36.5c3.3,0,5.7,0.6,7.3,1.9c1.5,1.3,2.3,3.4,2.3,6.4v10c0,3-0.8,5.1-2.3,6.4c-1.5,1.3-4,1.9-7.3,1.9h-5.6	l19.7,16.1H161l-17.2-16.1h-9.4v16.1h-9.7V0z M134.4,7.4v11.9h22.3c1.5,0,2.7-0.2,3.4-0.6c0.7-0.4,1.1-1.3,1.1-2.8v-5.1	c0-1.4-0.4-2.4-1.1-2.8c-0.7-0.4-1.8-0.6-3.4-0.6H134.4z"/><path d="M190.9,0h43.6v7.3h-33.7v9.5h19.7V24h-19.7v10.6h34.1v8h-44V0z"/><path d="M247.4,38l29.8-30.4h-26.8V0h42.8v4.2l-30.2,30.4h30.2v8h-45.8V38z"/><g>	<path d="M16.4,54.9H3.8v4.6h11.5c1.7,0,2.8,0.3,3.4,0.9c0.6,0.6,0.9,1.7,0.9,3.4v2.1c0,1.7-0.3,2.8-0.9,3.4		c-0.6,0.6-1.8,0.9-3.5,0.9H4.4c-1.7,0-2.9-0.3-3.5-0.9C0.3,68.7,0,67.6,0,65.9v-0.5l3.1-0.6v2.7h13.5v-5H5.1		c-1.7,0-2.8-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4v-1.7c0-1.6,0.3-2.8,0.9-3.4c0.6-0.6,1.8-0.9,3.5-0.9h10c1.7,0,2.8,0.3,3.5,0.9		c0.6,0.6,1,1.6,1,3.1v0.4l-3.1,0.7V54.9z"/>	<path d="M56.9,54.9v15.3h-3.4V54.9H45v-2.7h20.4v2.7H56.9z"/>	<path d="M94.6,52.2v15.2h13.1V52.2h3.4v13.7c0,1.7-0.3,2.8-0.9,3.4c-0.6,0.6-1.8,0.9-3.5,0.9H95.6c-1.7,0-2.9-0.3-3.5-0.9		c-0.6-0.6-0.9-1.7-0.9-3.3V52.2H94.6z"/>	<path d="M151.9,52.2c1.7,0,3.1,0.1,4.3,0.3c1.2,0.2,2.1,0.6,2.9,1c1.2,0.8,2.2,1.8,2.9,3.2c0.7,1.3,1,2.8,1,4.4		c0,3-0.9,5.3-2.7,6.8c-1.8,1.5-4.6,2.2-8.3,2.2h-10.3V52.2H151.9z M151.5,54.9h-6.6v12.6h6.6c2.9,0,5-0.5,6.2-1.5		c1.2-1,1.8-2.6,1.8-4.9c0-2.2-0.6-3.8-1.9-4.8C156.5,55.4,154.4,54.9,151.5,54.9z"/>	<path d="M195,70.2h-3.4V52.3h3.4V70.2z"/>	<path d="M223.6,56.5c0-1.6,0.3-2.8,0.9-3.4c0.6-0.6,1.8-0.9,3.5-0.9h13c1.7,0,2.9,0.3,3.5,0.9c0.6,0.6,0.9,1.7,0.9,3.4v9.4		c0,1.6-0.3,2.8-0.9,3.3c-0.6,0.6-1.8,0.9-3.5,0.9h-13c-1.7,0-2.9-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4V56.5z M226.9,67.4h15V54.9		h-15V67.4z"/>	<path d="M289.8,54.9h-12.6v4.6h11.5c1.7,0,2.8,0.3,3.4,0.9c0.6,0.6,0.9,1.7,0.9,3.4v2.1c0,1.7-0.3,2.8-0.9,3.4		c-0.6,0.6-1.8,0.9-3.5,0.9h-10.9c-1.7,0-2.9-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4v-0.5l3.1-0.6v2.7H290v-5h-11.5		c-1.7,0-2.8-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4v-1.7c0-1.6,0.3-2.8,0.9-3.4c0.6-0.6,1.8-0.9,3.5-0.9h10c1.7,0,2.8,0.3,3.5,0.9		c0.6,0.6,1,1.6,1,3.1v0.4l-3.1,0.7V54.9z"/></g></svg>                  </a>
+                </div>
+                <div class="nav-item menu">
+                                      <a href="/careers">Empleo</a>
+                                  </div>
+                <div class="nav-item menu">
+                                      <a href="/culture">Cultural</a>
+                                  </div>
+                <div class="nav-item menu">
+                                      <a href="/studios">Estudios</a>
+                                  </div>
+                <div class="nav-item menu">
+                                      <a href="/press">Prensa</a>
+                                  </div>
+                <div class="nav-item menu">
+                                      <a href="/events">Eventos</a>
+                                  </div>
+                <div class="nav-item menu has-children">
+                  <a href="#" class="ion-android-arrow-dropdown"></a>
+                  <div class="nav-items submenu align-end">
+                    <div class="nav-item menu">
+                      <a href="/legal">Legal</a>
+                    </div>
+                    <div class="nav-item menu">
+                    <a href="/studio-tours">Recorridos del estudio</a>
+                     </div>
+                    <div class="nav-item menu">
+                      <a href="/contact">Contáctanos</a>
+                    </div>
+                    <div class="nav-item menu">
+                      <a href="/breaking-in">Abrirse paso en la industria</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="mobile-nav show-for-small-only">
+      <div class="menu-icon" data-nav-btn=".nav-wrapper">
+        <div class="hamburger-icon ion-navicon-round"></div>
+      </div>
+      <div class="nav-wrapper toggle-nav">
+        <div class="close-btn"></div>
+        <div class="logo-small"><?xml version="1.0" encoding="utf-8"?><!-- Generator: Adobe Illustrator 19.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  --><svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"	 viewBox="0 0 293.1 70.2" style="enable-background:new 0 0 293.1 70.2;" xml:space="preserve"><path d="M0.9,0h9.9v16.5h31V0h10v42.6h-10V24.3h-31v18.3H0.9V0z"/><path d="M73.6,0h9.9v42.6h-9.9V0z"/><path d="M99.4,16.4h10.2v8.5H99.4V16.4z"/><path d="M124.6,0h36.5c3.3,0,5.7,0.6,7.3,1.9c1.5,1.3,2.3,3.4,2.3,6.4v10c0,3-0.8,5.1-2.3,6.4c-1.5,1.3-4,1.9-7.3,1.9h-5.6	l19.7,16.1H161l-17.2-16.1h-9.4v16.1h-9.7V0z M134.4,7.4v11.9h22.3c1.5,0,2.7-0.2,3.4-0.6c0.7-0.4,1.1-1.3,1.1-2.8v-5.1	c0-1.4-0.4-2.4-1.1-2.8c-0.7-0.4-1.8-0.6-3.4-0.6H134.4z"/><path d="M190.9,0h43.6v7.3h-33.7v9.5h19.7V24h-19.7v10.6h34.1v8h-44V0z"/><path d="M247.4,38l29.8-30.4h-26.8V0h42.8v4.2l-30.2,30.4h30.2v8h-45.8V38z"/><g>	<path d="M16.4,54.9H3.8v4.6h11.5c1.7,0,2.8,0.3,3.4,0.9c0.6,0.6,0.9,1.7,0.9,3.4v2.1c0,1.7-0.3,2.8-0.9,3.4		c-0.6,0.6-1.8,0.9-3.5,0.9H4.4c-1.7,0-2.9-0.3-3.5-0.9C0.3,68.7,0,67.6,0,65.9v-0.5l3.1-0.6v2.7h13.5v-5H5.1		c-1.7,0-2.8-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4v-1.7c0-1.6,0.3-2.8,0.9-3.4c0.6-0.6,1.8-0.9,3.5-0.9h10c1.7,0,2.8,0.3,3.5,0.9		c0.6,0.6,1,1.6,1,3.1v0.4l-3.1,0.7V54.9z"/>	<path d="M56.9,54.9v15.3h-3.4V54.9H45v-2.7h20.4v2.7H56.9z"/>	<path d="M94.6,52.2v15.2h13.1V52.2h3.4v13.7c0,1.7-0.3,2.8-0.9,3.4c-0.6,0.6-1.8,0.9-3.5,0.9H95.6c-1.7,0-2.9-0.3-3.5-0.9		c-0.6-0.6-0.9-1.7-0.9-3.3V52.2H94.6z"/>	<path d="M151.9,52.2c1.7,0,3.1,0.1,4.3,0.3c1.2,0.2,2.1,0.6,2.9,1c1.2,0.8,2.2,1.8,2.9,3.2c0.7,1.3,1,2.8,1,4.4		c0,3-0.9,5.3-2.7,6.8c-1.8,1.5-4.6,2.2-8.3,2.2h-10.3V52.2H151.9z M151.5,54.9h-6.6v12.6h6.6c2.9,0,5-0.5,6.2-1.5		c1.2-1,1.8-2.6,1.8-4.9c0-2.2-0.6-3.8-1.9-4.8C156.5,55.4,154.4,54.9,151.5,54.9z"/>	<path d="M195,70.2h-3.4V52.3h3.4V70.2z"/>	<path d="M223.6,56.5c0-1.6,0.3-2.8,0.9-3.4c0.6-0.6,1.8-0.9,3.5-0.9h13c1.7,0,2.9,0.3,3.5,0.9c0.6,0.6,0.9,1.7,0.9,3.4v9.4		c0,1.6-0.3,2.8-0.9,3.3c-0.6,0.6-1.8,0.9-3.5,0.9h-13c-1.7,0-2.9-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4V56.5z M226.9,67.4h15V54.9		h-15V67.4z"/>	<path d="M289.8,54.9h-12.6v4.6h11.5c1.7,0,2.8,0.3,3.4,0.9c0.6,0.6,0.9,1.7,0.9,3.4v2.1c0,1.7-0.3,2.8-0.9,3.4		c-0.6,0.6-1.8,0.9-3.5,0.9h-10.9c-1.7,0-2.9-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4v-0.5l3.1-0.6v2.7H290v-5h-11.5		c-1.7,0-2.8-0.3-3.5-0.9c-0.6-0.6-0.9-1.7-0.9-3.4v-1.7c0-1.6,0.3-2.8,0.9-3.4c0.6-0.6,1.8-0.9,3.5-0.9h10c1.7,0,2.8,0.3,3.5,0.9		c0.6,0.6,1,1.6,1,3.1v0.4l-3.1,0.7V54.9z"/></g></svg></div>
+        <ul>
+          <li><a href="/homepage">Inicio</a></li>
+          <li><a href="/careers">Empleo</a></li>
+          <li><a href="/culture">Cultural</a></li>
+          <li><a href="/studios">Estudios</a></li>
+          <li><a href="/press">Prensa</a></li>
+          <li><a href="/events">Eventos</a></li>
+          <li><a href="/legal">Legal</a></li>
+          <li><a href="/studio-tours">Recorridos del estudio</a></li>
+          <li><a href="/contact">Contactos</a></li>
+          <li><a href="/breaking-in">Abrirse paso en la industria</a></li>
+        </ul>
+      </div>
+    </div>
+
+    
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link href="http://www.tfaforms.com/form-builder/4.3.0/css/wforms-layout.css?v=502-12" rel="stylesheet" type="text/css" />
+    <!--[if IE 8]>
+    <link href="http://www.tfaforms.com/form-builder/4.3.0/css/wforms-layout-ie8.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 7]>
+    <link href="http://www.tfaforms.com/form-builder/4.3.0/css/wforms-layout-ie7.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+    <!--[if IE 6]>
+    <link href="http://www.tfaforms.com/form-builder/4.3.0/css/wforms-layout-ie6.css" rel="stylesheet" type="text/css" />
+    <![endif]-->
+
+    <link href="http://www.tfaforms.com/themes/get/45821" rel="stylesheet" type="text/css" />
+    <link href="http://www.tfaforms.com/form-builder/4.3.0/css/wforms-jsonly.css?v=502-12" rel="alternate stylesheet" title="This stylesheet activated by javascript" type="text/css" />
+    <script type="text/javascript" src="http://www.tfaforms.com/wForms/3.10/js/wforms.js?v=502-12"></script>
+    <script type="text/javascript">
+        wFORMS.behaviors.prefill.skip = false;
+    </script>
+
+              <script type="text/javascript" src="http://www.tfaforms.com/wForms/3.10/js/localization-es.js?v=502-12"></script>
+          
+<!-- FORM: BODY SECTION -->
+<div class="wFormContainer"  >
+<div class=""><div class="wForm" id="tfa_0-WRPR" dir="ltr">
+
+  <div class="bug-forum-wrapper">
+    <p>Si encuentras errores o fallos específicos al juego y no a tu cuenta, por favor envíanos un mensaje en nuestros foros de juegos de Hi-Rez detallando el problema:</p>
+    <ul>
+      <li><a target="_blank" href="http://forums.paladins.com/forumdisplay.php?55-Bug-Reporting">Foro para reportar fallos en Paladins</a></li>
+      <li><a target="_blank" href="http://forums.smitegame.com/forumdisplay.php?270-Bug-Reporting">Foro para reportar fallos en SMITE:</a></li>
+      <li><a target="_blank" href="http://forums.smitegame.com/forumdisplay.php?282-SMITE-Tactics">Foro para reportar fallos en Hand of the Gods:</a></li>
+    </ul>
+  </div>
+<h3 class="wFormTitle" id="tfa_0-T">Envíale una pregunta a nuestro equipo de soporte:</h3>
+<form method="post" action="https://www.tfaforms.com/responses/processor" class="hintsBelow labelsLeftAligned" id="tfa_0" enctype="multipart/form-data">
+<div class="oneField field-container-D     " id="tfa_1-D">
+<label id="tfa_1-L" for="tfa_1" class="label preField reqMark">Correo electrónico</label><div class="inputWrapper"><input type="text" id="tfa_1" name="tfa_1" value="" placeholder="" maxlength="128" title="Email Address" class="validate-email required"></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_2-D">
+<label id="tfa_2-L" for="tfa_2" class="label preField reqMark">Subject</label><div class="inputWrapper"><input type="text" id="tfa_2" name="tfa_2" value="" placeholder="" maxlength="128" title="Subject" class="required"></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_131-D">
+<label id="tfa_131-L" for="tfa_131" class="label preField " style="width: 130px;">Idioma</label><div class="inputWrapper"><select id="tfa_131" name="tfa_131" title="Language" class=""><option value="">Por favor selecciona…</option>
+<option value="tfa_132" id="tfa_132" class="" >Inglés</option>
+<option value="tfa_133" id="tfa_133" class="" >Francés</option>
+<option value="tfa_134" id="tfa_134" class="" >Alemán</option>
+<option value="tfa_135" id="tfa_135" class="" selected>Español</option>
+<option value="tfa_136" id="tfa_136" class="" >Polski</option>
+<option value="tfa_137" id="tfa_137" class="" >Polaco</option>
+<option value="tfa_138" id="tfa_138" class="" >Portugués de Brasil</option>
+<option value="tfa_139" id="tfa_139" class="" >中文</option>
+<option value="tfa_140" id="tfa_140" class="" >日本語</option></select></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_30-D">
+<label id="tfa_30-L" for="tfa_30" class="label preField reqMark">Product</label><div class="inputWrapper"><select id="tfa_30" name="tfa_30" title="Product" class="required"><option value="">Please select...</option>
+<option value="tfa_93" id="tfa_93" data-conditionals="#tfa_128" class="">Realm Royale (PC)</option>
+<option value="tfa_35" id="tfa_35" data-conditionals="#tfa_87,#tfa_86,#tfa_82,#tfa_128,#tfa_81" class="">SMITE (PC)</option>
+<option value="tfa_36" id="tfa_36" data-conditionals="#tfa_86,#tfa_82,#tfa_128,#tfa_81" class="">SMITE (Mac)</option>
+<option value="tfa_37" id="tfa_37" data-conditionals="#tfa_89,#tfa_130" class="">SMITE (Xbox)</option>
+<option value="tfa_38" id="tfa_38" data-conditionals="#tfa_88,#tfa_130" class="">SMITE (PS4)</option>
+<option value="tfa_39" id="tfa_39" data-conditionals="#tfa_86,#tfa_82,#tfa_128,#tfa_81" class="">Hand of the Gods (PC)</option>
+<option value="tfa_91" id="tfa_91" data-conditionals="#tfa_130" class="">Hand of the Gods (Xbox)</option>
+<option value="tfa_92" id="tfa_92" data-conditionals="#tfa_130" class="">Hand of the Gods (PS4)</option>
+<option value="tfa_129" id="tfa_129" data-conditionals="#tfa_130" class="">Paladins (Switch)</option>
+<option value="tfa_40" id="tfa_40" data-conditionals="#tfa_86,#tfa_82,#tfa_128,#tfa_81" class="">Paladins (PC)</option>
+<option value="tfa_41" id="tfa_41" data-conditionals="#tfa_86,#tfa_82,#tfa_128,#tfa_81" class="">Paladins (Mac)</option>
+<option value="tfa_42" id="tfa_42" data-conditionals="#tfa_89,#tfa_130" class="">Paladins (Xbox)</option>
+<option value="tfa_43" id="tfa_43" data-conditionals="#tfa_88,#tfa_130" class="">Paladins (PS4)</option>
+<option value="tfa_90" id="tfa_90" class="">Paladins Strike (Mobíl)</option>
+<option value="tfa_44" id="tfa_44" class="">Global Agenda (PC)</option>
+<option value="tfa_45" id="tfa_45" class="">Jetpack Fighter (Mobile)</option>
+<option value="tfa_46" id="tfa_46" data-conditionals="#tfa_86,#tfa_82,#tfa_81" class="">Tribes (PC)</option>
+<option value="tfa_47" id="tfa_47" data-conditionals="#tfa_81" class="">Other</option></select></div>
+</div>
+<div id="tfa_77" class="section inline group">
+<div class="oneField field-container-D     " id="tfa_16-D">
+<label id="tfa_16-L" for="tfa_16" class="label preField reqMark">Category</label><div class="inputWrapper"><select id="tfa_16" name="tfa_16" data-filter-dependent="#tfa_49" title="Category" class="required"><option value="">Por favor selecciona…</option>
+<option value="tfa_17" id="tfa_17" data-conditionals="#tfa_88,#tfa_89,#tfa_82,#tfa_81" class="">Account Management</option>
+<option value="tfa_18" id="tfa_18" data-conditionals="#tfa_88,#tfa_89,#tfa_86" class="">Billing</option>
+<option value="tfa_19" id="tfa_19" class="">Technical Issues</option>
+<option value="tfa_20" id="tfa_20" data-conditionals="#tfa_87" class="">Gameplay</option></select></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_49-D">
+<label id="tfa_49-L" for="tfa_49" class="label preField reqMark">Sub-Category</label><div class="inputWrapper"><select id="tfa_49" name="tfa_49" data-filter-control="#tfa_16" title="Sub-Category" class="required"><option value="">Por favor selecciona…</option>
+<optgroup id="tfa_50" label="Account Management" class="choiceGroup">
+<option value="tfa_54" id="tfa_54" data-conditionals="#tfa_88,#tfa_89" class="">Vinculación de cuentas:</option>
+<option value="tfa_55" id="tfa_55" class="">Account Recovery</option>
+<option value="tfa_56" id="tfa_56" data-conditionals="#tfa_88,#tfa_89" class="">Banned Account</option>
+<option value="tfa_57" id="tfa_57" class="">Disable an Account</option>
+<option value="tfa_61" id="tfa_61" class="">Player Referral</option>
+<option value="tfa_62" id="tfa_62" class="">Other</option>
+</optgroup>
+<optgroup id="tfa_51" label="Billing" class="choiceGroup">
+<option value="tfa_68" id="tfa_68" data-conditionals="#tfa_88,#tfa_89,#tfa_86" class="">Accidental Purchase</option>
+<option value="tfa_69" id="tfa_69" data-conditionals="#tfa_88,#tfa_89,#tfa_86" class="">Did Not Receive a Purchase</option>
+<option value="tfa_70" id="tfa_70" data-conditionals="#tfa_88,#tfa_89,#tfa_86" class="">Purchase Error</option>
+<option value="tfa_71" id="tfa_71" data-conditionals="#tfa_88,#tfa_89,#tfa_86" class="">Unauthorized Purchase</option>
+</optgroup>
+<optgroup id="tfa_52" label="Technical Issues" class="choiceGroup">
+<option value="tfa_72" id="tfa_72" class="">Client Issue</option>
+<option value="tfa_74" id="tfa_74" class="">Installation Issue</option>
+<option value="tfa_75" id="tfa_75" class="">Launcher Issue</option>
+<option value="tfa_76" id="tfa_76" class="">Website Functionality</option>
+</optgroup>
+<optgroup id="tfa_53" label="Gameplay" class="choiceGroup">
+<option value="tfa_63" id="tfa_63" class="">Abuse Report</option>
+<option value="tfa_64" id="tfa_64" class="">Feedback</option>
+<option value="tfa_65" id="tfa_65" class="">In-Game Error/Bug</option>
+<option value="tfa_66" id="tfa_66" class="">In-Game Reward Issue</option>
+<option value="tfa_67" id="tfa_67" data-conditionals="#tfa_87" class="">Promo Code Issue</option>
+<option value="tfa_78" id="tfa_78" class="">EasyAntiCheat</option>
+</optgroup></select></div>
+</div>
+</div>
+<div class="oneField field-container-D     " id="tfa_81-D">
+<label id="tfa_81-L" for="tfa_81" class="label preField ">New E-Mail</label><div class="inputWrapper"><input type="text" id="tfa_81" name="tfa_81" value="" placeholder="" data-condition="(`#tfa_35` OR `#tfa_36` OR `#tfa_40` OR `#tfa_41` OR `#tfa_39` OR `#tfa_46` OR `#tfa_47`) AND `#tfa_17`" title="New E-Mail" class=""></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_84-D">
+<label id="tfa_84-L" for="tfa_84" class="label preField ">Transaction ID</label><div class="inputWrapper"><input type="text" id="tfa_84" name="tfa_84" value="" placeholder="" title="Transaction ID" class=""></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_128-D">
+<label id="tfa_128-L" for="tfa_128" class="label preField ">Steam ID</label><div class="inputWrapper"><input type="text" id="tfa_128" name="tfa_128" value="" placeholder="" data-condition="`#tfa_93` OR `#tfa_35` OR `#tfa_39` OR `#tfa_40` OR `#tfa_36` OR `#tfa_41`" title="Steam ID" class=""></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_130-D">
+<label id="tfa_130-L" for="tfa_130" class="label preField ">ID del Cliente:</label><div class="inputWrapper"><input type="text" id="tfa_130" name="tfa_130" value="" placeholder="" data-condition="`#tfa_129` OR `#tfa_37` OR `#tfa_38` OR `#tfa_91` OR `#tfa_92` OR `#tfa_42` OR `#tfa_43`" title="Customer ID" class=""></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_87-D">
+<label id="tfa_87-L" for="tfa_87" class="label preField ">Promo Code</label><div class="inputWrapper"><input type="text" id="tfa_87" name="tfa_87" value="" placeholder="" data-condition="`#tfa_35` AND `#tfa_20` AND `#tfa_67`" title="Promo Code" class=""></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_88-D">
+<label id="tfa_88-L" for="tfa_88" class="label preField ">PS4 Name</label><div class="inputWrapper"><input type="text" id="tfa_88" name="tfa_88" value="" placeholder="" data-condition="(`#tfa_38` OR `#tfa_43`) AND (`#tfa_17` OR `#tfa_18`) AND (`#tfa_56` OR `#tfa_54` OR `#tfa_69` OR `#tfa_70` OR `#tfa_68` OR `#tfa_71`)" title="PS4 Name" class=""></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_89-D">
+<label id="tfa_89-L" for="tfa_89" class="label preField ">Gamertag</label><div class="inputWrapper"><input type="text" id="tfa_89" name="tfa_89" value="" placeholder="" data-condition="(`#tfa_37` OR `#tfa_42`) AND (`#tfa_17` OR `#tfa_18`) AND (`#tfa_56` OR `#tfa_54` OR `#tfa_69` OR `#tfa_70` OR `#tfa_68` OR `#tfa_71`)" title="Gamertag" class=""></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_21-D">
+<label id="tfa_21-L" for="tfa_21" class="label preField ">Question</label><div class="inputWrapper"><textarea maxlength="1500" id="tfa_21" name="tfa_21" title="Question" class=""></textarea></div>
+</div>
+<div class="oneField field-container-D     " id="tfa_23-D">
+<label id="tfa_23-L" for="tfa_23" class="label preField ">Anexo</label><div class="inputWrapper"><input type="file" id="tfa_23" name="tfa_23" size="" title="Attachment" class=""></div>
+</div>
+<input type="hidden" id="tfa_48" name="tfa_48" value="" class=""><div><fieldset class="captcha">
+<legend>Captcha</legend>
+<p class="instructions">Por favor introduzca los caracteres que ves en la imagen</p>
+<div class="oneField">
+<img src="http://www.tfaforms.com/forms/captcha" width="200" height="60" alt="Visual CAPTCHA"><br><label class="preField" for="tfa_captcha_text">Caracteres</label> <input type="text" name="tfa_captcha_text" id="tfa_captcha_text"><br>
+</div>
+<div class="captchaHelp">This helps prevent automated form submissions. If you are not sure what the characters are, make your best guess. You will have another try in the next screen.<br>Can’t see the image? <a href="http://www.tfaforms.com/forms/captcha/1">Click here for an audible version in English.</a>
+</div>
+</fieldset></div>
+<div class="actions" id="tfa_0-A"><input type="submit" class="primaryAction" value="Submit"></div>
+<div style="clear:both"></div>
+<input type="hidden" value="4599264" name="tfa_dbFormId" id="tfa_dbFormId"><input type="hidden" value="" name="tfa_dbResponseId" id="tfa_dbResponseId"><input type="hidden" value="7ab87a23c7b6045751bbc43b31949184" name="tfa_dbControl" id="tfa_dbControl"><input type="hidden" value="120" name="tfa_dbVersionId" id="tfa_dbVersionId"><input type="hidden" value="" name="tfa_switchedoff" id="tfa_switchedoff">
+</form>
+</div></div>
+
+<!--   <p class="supportInfo" >
+        <a href="https://www.tfaforms.com/forms/help/4599264" target="new" style="font-size: 0.7em;">
+      Need assistance with this form?    </a>
+
+      </p> -->
+
+</div>
+<script>
+  $(document).ready(function() {
+    $( "#tfa_16" ).on('change', function() {
+
+        var activeFilter = $("#tfa_16").val();
+        console.log(activeFilter);
+        $('#tfa_49').val('');
+        $("#tfa_50").hide();
+        $("#tfa_51").hide();
+        $("#tfa_52").hide();
+        $("#tfa_53").hide();
+        var subCategory = null;
+        switch(activeFilter) {
+            case "tfa_17":
+            subCategory = "#tfa_50";
+            break;
+            case "tfa_18":
+            subCategory = "#tfa_51";
+            break;
+            case "tfa_19":
+            subCategory = "#tfa_52";
+            break;
+            case "tfa_20":
+            subCategory = "#tfa_53";
+            break;
+        }
+        $(subCategory).prop("disabled", false).show();
+    });
+  });
+</script>
+  
+    <footer class="hirez-footer" role="contentinfo">
+    <div class="center-wrapper">
+      <div class="row footer-top collapse no-margin">
+          <div class="columns small-12 medium-6">
+            <div class="play-container"><a class="brand" href="#">&nbsp;</a> <p class="play-now">&nbsp;</p> </div>
+          </div>
+          <div class="columns small-12 medium-6">
+            <ul class="social-stack"></ul>
+          </div>
+        </div>
+      </div>
+      <div class="center-wrapper">
+        <div class="row footer-mid collapse no-margin">
+          <div class="columns small-12 medium-9 footer-sub-nav"><div class="footer-nav"><ul id="menu-hi-rez-footer" class="menu"><li id="nav-menu-item-16" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#" class="menu-link main-menu-link">HiRez</a>
+<ul class="sub-menu menu-odd  menu-depth-1">
+	<li id="nav-menu-item-176" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.hirezstudios.com/careers/" class="menu-link sub-menu-link">Empleo</a></li>
+	<li id="nav-menu-item-175" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.hirezstudios.com/culture/" class="menu-link sub-menu-link">Cultural</a></li>
+	<li id="nav-menu-item-171" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.hirezstudios.com/studios/" class="menu-link sub-menu-link">Estudios</a></li>
+	<li id="nav-menu-item-174" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.hirezstudios.com/press/" class="menu-link sub-menu-link">Prensa</a></li>
+	<li id="nav-menu-item-173" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.hirezstudios.com/contact/" class="menu-link sub-menu-link">Contáctanos</a></li>
+	<li id="nav-menu-item-172" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.hirezstudios.com/breaking-in/" class="menu-link sub-menu-link">Abrirse paso</a></li>
+	<li id="nav-menu-item-1370" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom"><a href="https://web2.hirez.com/hirez-studios//wp-content/uploads/2015/11/Hi-Rez-Studios-Online-Terms-of-Service-and-Use-Agreement-Last-updated-Aug.-24-2017.pdf" class="menu-link sub-menu-link">Términos de servicio</a></li>
+	<li id="nav-menu-item-1371" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom"><a href="http://hirezstudios.force.com/support/" class="menu-link sub-menu-link">Asistencia</a></li>
+	<li id="nav-menu-item-1372" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom"><a href="https://sites.google.com/a/hirezstudios.com/hi-rez-intranet/?pli=1" class="menu-link sub-menu-link">Información del empleado</a></li>
+	<li id="nav-menu-item-1382" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page"><a href="http://www.hirezstudios.com/privacy/" class="menu-link sub-menu-link">Privacy</a></li>
+</ul>
+</li>
+<li id="nav-menu-item-23" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#" class="menu-link main-menu-link">Cuenta</a>
+<ul class="sub-menu menu-odd  menu-depth-1">
+	<li id="nav-menu-item-177" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-post_type menu-item-object-page"><a href="https://www.hirezstudios.com/my-account/" class="menu-link sub-menu-link">Mi cuenta</a></li>
+</ul>
+</li>
+<li id="nav-menu-item-29" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children"><a href="#" class="menu-link main-menu-link">Juegos</a>
+<ul class="sub-menu menu-odd  menu-depth-1">
+	<li id="nav-menu-item-30" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="http://www.smitegame.com/" class="menu-link sub-menu-link">SMITE</a></li>
+	<li id="nav-menu-item-31" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="http://www.paladins.com/" class="menu-link sub-menu-link">Paladins</a></li>
+	<li id="nav-menu-item-32" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="http://www.handofthegods.com/" class="menu-link sub-menu-link">Hand of the Gods</a></li>
+	<li id="nav-menu-item-211" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="http://www.jetpackfighter.com/" class="menu-link sub-menu-link">Jetpack Fighter</a></li>
+	<li id="nav-menu-item-1412" class="sub-menu-item  menu-item-odd menu-item-depth-1 menu-item menu-item-type-custom menu-item-object-custom"><a href="https://www.realmroyale.com" class="menu-link sub-menu-link">Realm Royale</a></li>
+</ul>
+</li>
+</ul></div></div>
+          <div class="columns small-12 medium-3 studio-game-info">
+            <a class="hirez-brand" href="http://hirezstudios.com/"></a></div>
+        </div>
+      </div>
+    </div><div class="center-wrapper">
+      <div class="row footer-bottom collapse no-margin"><div class="columns small-12 medium-6">
+          <div class="copyright">&copy; 2018 Copyright Hi-Rez Studios, Inc. All rights reserved.</div>
+        </div>
+        <div class="columns small-12 medium-6"><div class="footer-req-nav"><ul id="menu-hi-rez-legal-footer" class="menu"><li id="nav-menu-item-33" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom"><a href="https://web2.hirez.com/hirez-studios//wp-content/uploads/2015/11/Hi-Rez-Studios-Online-Terms-of-Service-and-Use-Agreement-Last-updated-Aug.-24-2017.pdf" class="menu-link main-menu-link">Términos de servicio</a></li>
+<li id="nav-menu-item-34" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom"><a href="http://hirezstudios.force.com/support/" class="menu-link main-menu-link">Asistencia</a></li>
+<li id="nav-menu-item-35" class="main-menu-item  menu-item-even menu-item-depth-0 menu-item menu-item-type-custom menu-item-object-custom"><a target="_blank" href="https://sites.google.com/a/hirezstudios.com/hi-rez-intranet/?pli=1" class="menu-link main-menu-link">Información del empleado</a></li>
+</ul></div></div></div>
+    </div>
+  </footer>
+	</div>
+
+	<link rel='stylesheet' id='hirezfooter-css-css'  href='http://www.hirezstudios.com/wp-content/plugins/hz-footer-plugin/css/hz-footer.min.css?ver=1.0.1' type='text/css' media='all' />
+<script type='text/javascript'>
+/* <![CDATA[ */
+var HZLoadMore = {"taken":"Username is taken.","available":"Username is available!","user_special":"Username must not contain special characters.","passwords_match":"Passwords match.","passwords_no_match":"Passwords do not match!","characters_7":"Please enter at least 7 characters","password_special":"Password must not contain special characters.","email_special":"Email address must not contain special characters.","required":"This field is required","same_value":"Please enter the same value again.","invalid_cdk":"Please check your cdk. CDK's should be exactly 36 characters","ajaxurl":"http:\/\/www.hirezstudios.com\/wp-admin\/admin-ajax.php"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.hirezstudios.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","recaptcha":{"messages":{"empty":"Please verify that you are not a robot."}},"sending":"Sending ..."};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.5'></script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/themes/hi-rez-studios/js/script.min.js'></script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/themes/hi-rez-studios/inc/super-nav.js?ver=1.0.0'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var HZDashPanel = {"ajax_url":"http:\/\/www.hirezstudios.com\/wp-admin\/admin-ajax.php","nonce":[]};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-content/plugins/hirez-acct-dash-plugin/js/script.js'></script>
+<script type='text/javascript' src='http://www.hirezstudios.com/wp-includes/js/wp-embed.js?ver=4.6.1'></script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-72056339-1', 'hirezstudios.com');
+  ga('send', 'pageview');
+</script>
+
+<script>
+  function getCookie(name) {
+	    var v = document.cookie.match('(^|;) ?' + name + '=([^;]*)(;|$)');
+	    return v ? v[2] : null;
+	}
+
+  function setCookie(name, value, days) {
+	    var d = new Date;
+	    d.setTime(d.getTime() + 24*60*60*1000*days);
+	    document.cookie = name + "=" + value + ";path=/;expires=" + d.toGMTString();
+	}
+
+  function approveCookie() {
+    setCookie('viewedWarning',true,3650);
+    window.location.reload();
+  }
+
+  if (!getCookie('viewedWarning')) {
+    $(document.body).append('<div class="CookieOverlay"><div class="center-wrapper"><p>We use cookies to remember and understand how you may use our site. By using this site, you consent to the use of cookies. To disable cookies, please change your browser cookie settings. Please note that some site functionality may not function correctly if all cookies are disabled. For more information, check out our <a href="https://www.hirezstudios.com/privacy">Privacy Policy</a>.</p><div class="actions-wrapper"><a class="approve" onclick="approveCookie();">OK</a></div></div></div>');
+  }
+</script>
+
+
+  </body>
+
+</html>
